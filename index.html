@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eleanore Kirshner — Engineering Portfolio</title>
+<meta name="description" content="Eleanore (Ellie) Kirshner — Mechanical Engineering portfolio: bio-inspired robotics research and Baja SAE suspension and steering.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-inner">
+    <h1>Eleanore (Ellie) Jane Kirshner</h1>
+    <p class="contact"><a href="https://www.linkedin.com/in/eleanore-kirshner" target="_blank" rel="noopener">linkedin.com/in/eleanore-kirshner</a> · USA Citizen</p>
+  </div>
+  <nav class="site-nav"><div class="wrap"><a href="#education">Education</a><a href="#experience">Experience</a><a href="#publications">Publications</a><a href="#presentations">Presentations</a><a href="#honors">Honors</a><a href="#skills">Skills</a><a href="#activities">Activities</a></div></nav>
+</header>
+
+<main class="wrap">
+  <section id="education" class="cv">
+    <h2>Education</h2>
+    <div class="entry"><div class="eh"><h3>University of California, Irvine</h3><span>Expected June 2027</span></div>
+      <p>B.S. Mechanical Engineering, Minor: Materials Science · GPA: 3.914 · Dean's Honor List</p></div>
+    <div class="entry"><div class="eh"><h3>Basis Independent Silicon Valley High School</h3><span>June 2023</span></div>
+      <p>Diploma with High Honors · GPA: 4.73 (4.0 unweighted) · SAT: 1540 · AP Scholar with Distinction</p></div>
+  </section>
+
+  <section id="experience" class="cv"><h2>Experience</h2><div class="entry big"><div class="eh"><h3>Cognitive Anteater Robotics Lab <span class="role">· Undergraduate Researcher</span></h3><span>UCI, Irvine, CA · Jan 2024 – Present</span></div><ul><li>Designed and built OctoBot, a biomimetic octopus robot with 4 independently actuated TPU arms achieving over 90% tactile discrimination accuracy with an onboard machine learning classifier; published at SAB 2026</li><li>Oversaw hardware and software of CuttleBot 2, next generation of cuttlefish-inspired robot; created robot with a retractable claw capable of movement and camouflage</li><li>Designed robot shell for CuttleBot, a cuttlefish-inspired robot; published at SAB 2024</li></ul><div class="pf">
+  <article class="project" id="octobot">
+    <header class="band"><div><div class="k">Research · Cognitive Anteater Robotics Lab</div><h3>OctoBot: soft robot with touch sensing</h3></div><div class="date">2025–2026</div></header>
+    <p class="intro">An octopus-inspired soft robot that identifies what it is holding by touch alone, with no onboard cameras.</p>
+    <div class="pgrid">
+      <div class="txt">
+        <h4>What I did</h4><ul><li>Built the robot on my own, with <b>4 independently actuated arms</b></li><li>Deployed an onboard <b>object classifier</b></li></ul>
+        <h4>Key decisions</h4><ul><li><b>95A TPU segments</b> → bend with minimal effort and are 3D printable</li><li><b>Tendon + servo winch</b> → simple control with enough force to bend each arm</li><li><b>A single embedded pressure sensor</b> → touch sensing in a low-cost soft robot</li><li><b>Random Forest</b> → runs on an ESP32 and suits small datasets</li></ul>
+        <h4>Results</h4><ul><li><b>Over 90% accuracy</b> by touch alone</li><li><b>Published at SAB 2026</b> (first author) · presented at SAB 2026</li><li><b>IRT Award 2026</b> · presented at the UROP &amp; IRT Symposium 2026</li></ul>
+      </div>
+      <div class="media"><div class="gallery">
+<div class="grow">
+<div class="cell" style="flex:1.3333"><img src="assets/images/octobot-labeled.jpg" alt="OctoBot, labeled" loading="lazy" style="aspect-ratio:1.3333"></div>
+<div class="stack" style="flex:1.2130"><img src="assets/images/octobot-arm-front.jpg" alt="OctoBot TPU tentacle and servo winch, front" loading="lazy" style="aspect-ratio:2.4279"><img src="assets/images/octobot-arm-back.jpg" alt="OctoBot tentacle, back view" loading="lazy" style="aspect-ratio:2.4242"></div>
+</div>
+<div class="grow">
+<div class="cell" style="flex:1.9950"><img src="assets/images/oct_signals.jpg" alt="Mean tactile sensor signal by object" loading="lazy" style="aspect-ratio:1.9950"></div>
+<div class="cell" style="flex:1.0546"><img src="assets/images/oct_cm.jpg" alt="Grouped classifier confusion matrix" loading="lazy" style="aspect-ratio:1.0546"></div>
+</div>
+</div><div class="hlbox"><h4>Keeping rigid electronics from binding</h4><ul><li><b>Problem:</b> rigid sensor connections broke the sensor or blocked movement</li><li><b>Optimized segment geometry</b> → smooth, interference-free grasping</li><li><b>Custom mounts</b> → a clear path of travel for rigid parts</li></ul></div></div>
+    </div>
+    <div class="docs"><span>Additional info:</span><a href="assets/docs/octobot-poster.pdf" target="_blank" rel="noopener">OctoBot poster (PDF)</a></div>
+  </article>
+  <article class="project" id="cuttlebot-2">
+    <header class="band"><div><div class="k">Research · Cognitive Anteater Robotics Lab</div><h3>CuttleBot 2: claw &amp; camouflage</h3></div><div class="date">2024–2025</div></header>
+    <p class="intro">The next-generation CuttleBot, built to match a real cuttlefish's abilities more closely.</p>
+    <div class="pgrid">
+      <div class="txt">
+        <h4>What I did</h4><ul><li>Led the robot's <b>hardware and software</b></li><li>Built a <b>fully retractable claw</b></li><li>Wrote a <b>custom mapping program</b> to display images</li></ul>
+        <h4>Key decisions</h4><ul><li><b>One-piece printed scissor linkage</b> → easier assembly, better stability</li><li><b>Tuned tolerances, reinforced gears</b> → smooth extension</li><li><b>Embedded holders</b> → stable electronics</li><li><b>LED matrix instead of strips</b> → higher-resolution camouflage</li></ul>
+        <h4>Results</h4><ul><li>Claw <b>extended, captured, and retracted</b> prey</li><li>Camouflage <b>matched backgrounds</b></li><li><b>UROP Fellow</b>, Summer 2024</li><li><b>IRT Award 2025</b> · presented at the UROP &amp; IRT Symposium 2025</li></ul>
+      </div>
+      <div class="media"><div class="gallery">
+<div class="grow">
+<div class="cell" style="flex:1.7778"><img src="assets/images/cuttlebot2-iso.jpg" alt="CuttleBot 2 with its claw extended" loading="lazy" style="aspect-ratio:1.7778"></div>
+<div class="cell" style="flex:0.6649"><img src="assets/images/cb2_claw.jpg" alt="Scissor-linkage claw and electronics" loading="lazy" style="aspect-ratio:0.6649"></div>
+</div>
+<div class="grow">
+<div class="cell" style="flex:0.7628"><img src="assets/images/cuttlebot2-camouflage-multi.jpg" alt="CuttleBot 2 camouflage shell, top view" loading="lazy" style="aspect-ratio:0.7628"></div>
+<div class="cell" style="flex:1.1787"><img src="assets/images/cuttlebot2-camouflage-scene.jpg" alt="CuttleBot 2 camouflage matching four backgrounds" loading="lazy" style="aspect-ratio:1.1787"></div>
+</div>
+</div></div>
+    </div>
+    <div class="docs"><span>Additional info:</span><a href="assets/docs/cuttlebot2-poster.pdf" target="_blank" rel="noopener">CuttleBot 2 poster (PDF)</a></div>
+  </article>
+  <article class="project" id="cuttlebot">
+    <header class="band"><div><div class="k">Research · Cognitive Anteater Robotics Lab</div><h3>CuttleBot: robot shell design</h3></div><div class="date">2024</div></header>
+    <p class="intro">A cuttlefish-inspired robot that uses reinforcement learning to learn to avoid predators and approach prey.</p>
+    <div class="pgrid">
+      <div class="txt">
+        <h4>What I did</h4><ul><li>Designed the 3D-printable, semi-transparent shell that acts as the robot's camouflaging <b>"skin"</b></li><li>Gathered data and wrote up the robot's mechanical capabilities for the paper</li></ul>
+        <h4>Key decisions</h4><ul><li><b>Semi-transparent shell</b> → hides the electronics while spreading LED light evenly</li><li><b>Internal ribs</b> → hold the LED strips</li><li><b>Rim tabs + front opening</b> → mount to the base and clear the camera and claw</li></ul>
+        <h4>Results</h4><ul><li>Shell displayed <b>camouflage</b>, <b>blanching</b>, and a <b>hypnotic pattern</b></li><li><b>Published at SAB 2024</b> (co-author)</li></ul>
+      </div>
+      <div class="media"><div class="gallery">
+<div class="grow">
+<div class="cell" style="flex:1.2000"><img src="assets/images/cuttlebot-shell-cad.jpg" alt="CuttleBot shell CAD, solid view" loading="lazy" style="aspect-ratio:1.2000"></div>
+<div class="cell" style="flex:1.2450"><img src="assets/images/cuttlebot-shell-transparent.jpg" alt="CuttleBot shell CAD, transparent view" loading="lazy" style="aspect-ratio:1.2450"></div>
+</div>
+<div class="grow">
+<div class="cell" style="flex:1.0810"><img src="assets/images/cuttlebot-electronics.jpg" alt="LED electronics inside the CuttleBot shell" loading="lazy" style="aspect-ratio:1.0810"></div>
+<div class="cell" style="flex:1.1713"><img src="assets/images/cuttlebot-iso.jpg" alt="Assembled CuttleBot" loading="lazy" style="aspect-ratio:1.1713"></div>
+</div>
+</div></div>
+    </div>
+    <div class="docs"><span>Additional info:</span><a href="assets/docs/cuttlebot-poster.pdf" target="_blank" rel="noopener">CuttleBot poster (PDF)</a></div>
+  </article></div></div><div class="entry big"><div class="eh"><h3>Anteater Baja Racing Team</h3><span>UCI, Irvine, CA · Jun 2024 – Present</span></div><p>Designing and building a competitive off-road race vehicle from scratch for the international Baja SAE competition</p><div class="gallery">
+<div class="grow">
+<div class="cell" style="flex:1.4270"><img src="assets/images/baja-essay.jpg" alt="Anteater Baja Racing car after competition" loading="lazy" style="aspect-ratio:1.4270"></div>
+<div class="cell" style="flex:1.4995"><img src="assets/images/baja-rock-crawl.jpg" alt="Baja car on the rock crawl obstacle" loading="lazy" style="aspect-ratio:1.4995"></div>
+<div class="cell" style="flex:1.3333"><img src="assets/images/baja-dust.jpg" alt="Baja car cornering hard in the dust" loading="lazy" style="aspect-ratio:1.3333"></div>
+</div>
+</div><div class="role-h"><h4>Chief Engineer</h4><span>May 2026 – Present</span></div><ul><li>Set team goals; served as primary technical authority; managed integration of 5 subteams</li></ul><div class="role-h"><h4>Lead Engineer – Suspension, Steering, &amp; Brakes</h4><span>May 2025 – May 2026</span></div><div class="pf">
+  <article class="project" id="custom-rack-and-pinion">
+    <header class="band"><div><div class="k">Baja Racing · Suspension, Steering &amp; Brakes Lead Engineer</div><h3>Custom rack &amp; pinion</h3></div><div class="date">2025–2026</div></header>
+    <p class="intro">The team's first custom rack and pinion, designed and machined in house.</p>
+    <div class="pgrid">
+      <div class="txt">
+        <h4>What I did</h4><ul><li>Designed the rack and pinion</li><li>Ran <b>impact load calculations</b></li><li><b>FEA</b>: peak stress <b>80% / 68%</b> of yield</li><li>Built a <b>3D-printed prototype</b></li><li>Made <b>toleranced drawings</b></li><li>Machined housings on a <b>manual lathe and mill</b></li></ul>
+        <h4>Key decisions</h4><ul><li><b>Steel gears, aluminum housing</b> → strong, light</li><li><b>Two-part housing</b> → machinable with our end mills</li><li><b>Boots instead of seals</b> → keep dirt out</li></ul>
+        <h4>Results</h4><ul><li><b>17% lighter</b></li><li><b>77% cheaper</b></li><li><b>25% less lock-to-lock</b></li><li><b>No failures</b> in testing or competition</li></ul>
+      </div>
+      <div class="media"><div class="gallery">
+<div class="grow">
+<div class="cell" style="flex:4.6921"><img src="assets/images/rk_iters.jpg" alt="Rack and pinion CAD iterations V1 to V3" loading="lazy" style="aspect-ratio:4.6921"></div>
+<div class="cell" style="flex:1.4855"><img src="assets/images/rk_fea1.jpg" alt="Rack and pinion FEA" loading="lazy" style="aspect-ratio:1.4855"></div>
+</div>
+<div class="grow">
+<div class="cell" style="flex:1.4495"><img src="assets/images/rk_proto_fixed.jpg" alt="3D-printed rack and pinion prototype parts" loading="lazy" style="aspect-ratio:1.4495"></div>
+<div class="cell" style="flex:1.2903"><img src="assets/images/spur-housing-dwg.jpg" alt="Spur gear housing drawing" loading="lazy" style="aspect-ratio:1.2903"></div>
+</div>
+<div class="grow">
+<div class="cell" style="flex:2.8674"><img src="assets/images/rack-assembled.jpg" alt="Finished rack and pinion assembly" loading="lazy" style="aspect-ratio:2.8674"></div>
+<div class="cell" style="flex:1.3333"><img src="assets/images/rack-integrated.jpg" alt="Rack and pinion installed in the chassis" loading="lazy" style="aspect-ratio:1.3333"></div>
+</div>
+</div></div>
+    </div>
+    <div class="docs"><span>Additional info:</span><a href="assets/docs/rack-documentation.pdf" target="_blank" rel="noopener">Rack documentation (PDF)</a></div>
+  </article></div><div class="role-h"><h4>Engineer – Suspension &amp; Steering</h4><span>June 2024 – May 2025</span></div><div class="pf">
+  <article class="project" id="steering-geometry-design">
+    <header class="band"><div><div class="k">Baja Racing · Suspension &amp; Steering Engineer</div><h3>Steering geometry design</h3></div><div class="date">2024–2025</div></header>
+    <p class="intro">Steering for Anteater Baja Racing's off-road car, built to survive rocks, mud, and jumps at Baja SAE competition.</p>
+    <div class="pgrid">
+      <div class="txt">
+        <h4>What I did</h4><ul><li>Built a <b>parametric steering kinematics sketch</b></li><li>Developed a <b>SolidWorks Design Study method</b> to iterate through thousands of geometries</li><li>Sized tie rods for <b>buckling</b> by hand and checked parts with <b>FEA</b></li><li>Helped manufacture components like <b>control arms</b> and <b>bushings</b></li></ul>
+        <h4>Key decisions</h4><ul><li><b>Factor of safety of 2</b> for tie rods</li><li><b>6061 aluminum vs 4130 steel</b> → aluminum is thicker but lighter</li><li>Components chosen for tight <b>packaging and reliability</b></li></ul>
+        <h4>Results</h4><ul><li><b>60% Ackermann</b> steering geometry</li><li><b>No bump steer</b></li><li><b>No interference</b> through full travel</li><li><b>Improved lock-to-lock angle</b></li></ul>
+      </div>
+      <div class="media"><div class="gallery">
+<div class="grow">
+<div class="cell" style="flex:1.4705"><img src="assets/images/steering-kinematics.jpg" alt="Parametric steering kinematics sketch" loading="lazy" style="aspect-ratio:1.4705"></div>
+<div class="stack" style="flex:0.7282"><img src="assets/images/steer-asm-0.jpg" alt="Steering assembly on the front upright" loading="lazy" style="aspect-ratio:1.3949"><img src="assets/images/steer-asm-1.jpg" alt="Steering assembly on the front upright, second view" loading="lazy" style="aspect-ratio:1.5236"></div>
+</div>
+<div class="grow">
+<div class="cell" style="flex:2.8479"><img src="assets/images/steering-calculations.jpg" alt="Tie-rod load and buckling calculations" loading="lazy" style="aspect-ratio:2.8479"></div>
+</div>
+</div></div>
+    </div>
+    
+  </article></div></div><div class="entry"><div class="eh"><h3>TTM Technologies <span class="role">· Manufacturing Engineering Intern</span></h3><span>Santa Ana, CA · Jun – Aug 2026</span></div><ul><li>Designed tests and completed documentation to qualify X-ray machine for new process</li><li>Performed analysis and completed documentation to qualify new core and laminate material</li></ul></div><div class="entry"><div class="eh"><h3>KAV <span class="role">· Mechanical Engineering Intern</span></h3><span>Redwood City, CA · Jun – Aug 2025</span></div><ul><li>Conducted hands-on impact testing of 3D printed helmet coupons including post-processing and documentation</li><li>Reduced impact acceleration by up to 40% through data analysis of impact results</li><li>Optimized slicer settings to cut print time by up to 50% and streamline support removal</li></ul></div></section>
+
+  <section id="publications" class="cv">
+    <h2>Publications</h2>
+    <ul class="pubs">
+      <li><b>Kirshner, E.J.</b>, Yuan, A., Spurgiasz, J., Espino, H., Krichmar, J.L. (2026). Tactile Discrimination in a Soft Octopus-Inspired Robot. SAB v.16965, pp.335–346. <a href="https://doi.org/10.1007/978-3-032-39953-3_27" target="_blank" rel="noopener">doi:10.1007/978-3-032-39953-3_27</a></li>
+      <li>Pfeiffer, M.A., Kandimalla, S., Liu, J., Hsu, K., <b>Kirshner, E.J.</b>, Yuan, A., Lui, H.W., Krichmar, J.L. (2024). CuttleBot: Emulating Cuttlefish Behavior and Intelligence. SAB v.14993, pp.93–105. <a href="https://doi.org/10.1007/978-3-031-71533-4_7" target="_blank" rel="noopener">doi:10.1007/978-3-031-71533-4_7</a></li>
+    </ul>
+  </section>
+
+  <section id="presentations" class="cv">
+    <h2>Presentations</h2>
+    <ul class="pubs">
+      <li><b>Kirshner, E.J.</b> (2026). Tactile Discrimination in a Soft Octopus-Inspired Robot. SAB 2026 Conference Presentation.</li>
+      <li><b>Kirshner, E.J.</b> (2026). Cognitive Behavior in an Octopus-inspired Biomimetic Robot. UROP and IRT Symposium Presentation, UC Irvine.</li>
+      <li><b>Kirshner, E.J.</b> (2025). A Biomimetic Vision-Guided Robot Modeling Cuttlefish Cognition in a Dynamic Foraging Environment. UROP and IRT Symposium Presentation, UC Irvine.</li>
+      <li><b>Kirshner, E.J.</b>, Hsu, K., Yuan, A. (2024). Cognitive Anteater Robotics Lab: Then and Now. SAB 2024 Workshop.</li>
+    </ul>
+  </section>
+
+  <section id="honors" class="cv">
+    <h2>Honors &amp; Awards</h2>
+    <div class="entry"><div class="eh"><h3>Dean's Honor List, UC Irvine Samueli School of Engineering</h3><span>All quarters, 2023 – Present</span></div></div>
+    <div class="entry"><div class="eh"><h3>Interdisciplinary Research Teams (IRT) Award, Calit2 and UROP, UC Irvine</h3><span>2026</span></div></div>
+    <div class="entry"><div class="eh"><h3>Interdisciplinary Research Teams (IRT) Award, Calit2 and UROP, UC Irvine</h3><span>2025</span></div></div>
+    <div class="entry"><div class="eh"><h3>UROP Fellow, Summer Undergraduate Research Program (SURP), UC Irvine</h3><span>Summer 2024</span></div></div>
+  </section>
+
+  <section id="skills" class="cv">
+    <h2>Skills</h2>
+    <ul class="skl">
+      <li><b>CAD &amp; Design:</b> SolidWorks, Drafting</li>
+      <li><b>Fabrication:</b> 3D Printing, Manual Machining</li>
+      <li><b>Electronics:</b> Soldering, Arduino, Raspberry Pi</li>
+      <li><b>Programming:</b> MATLAB, Python</li>
+    </ul>
+  </section>
+
+  <section id="activities" class="cv">
+    <h2>Activities</h2>
+    <div class="entry"><div class="eh"><h3>Ice Hockey</h3><span>2013 – Present</span></div>
+      <p>ACHA D3 collegiate; previously tier I (AAA) travel and high school varsity</p></div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="wrap">Eleanore "Ellie" Kirshner · <a href="https://www.linkedin.com/in/eleanore-kirshner" target="_blank" rel="noopener">linkedin.com/in/eleanore-kirshner</a></div></footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous image">&#8249;</button>
+  <img class="lightbox-img" id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next image">&#8250;</button>
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
